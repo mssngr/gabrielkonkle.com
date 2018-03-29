@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-minimal-blog",
-  "description": "Gatsby Starter - Minimal Blog",
-  "version": "1.0.0",
-  "author": "LekoArts <hello@lekoarts.de>",
+  "name": "gabrielkonkle.com",
+  "description": "Gabriel Konkle - Front End Developer",
+  "version": "0.0.1",
+  "author": "Gabriel Konkle <gabriel@gabrielkonkle.com>",
   "dependencies": {
     "gatsby": "^1.9.231",
     "gatsby-link": "^1.6.39",
@@ -25,15 +25,6 @@
     "react-helmet": "^5.2.0",
     "styled-components": "^3.2.1"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "main": "n/a",
-  "scripts": {
-    "build": "gatsby build",
-    "dev": "gatsby develop -o"
-  },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
     "babel-preset-env": "^1.6.1",
@@ -45,6 +36,18 @@
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.7.0",
     "prettier": "^1.11.1"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "gatsby develop -o",
+    "deploy:dev": "gatsby build && surge public dev.gabrielkonkle.com",
+    "deploy:prod": "gatsby build && surge public gabrielkonkle.com",
+    "deploy": "gatsby build && surge public dev.gabrielkonkle.com && surge public gabrielkonkle.com"
   },
   "browserslist": [
     "> 1%",

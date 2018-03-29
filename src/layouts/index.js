@@ -70,8 +70,8 @@ const TemplateWrapper = props => {
         <SEO />
         {children()}
         <Footer>
-          &copy; 2018 by John Doe. All rights reserved. <br />
-          <a href="https://github.com/LeKoArts/gatsby-starter-minimal-blog">GitHub Repository</a>
+          &copy; 2018 by Gabriel Konkle. All rights reserved. <br />
+          <a href="https://github.com/mssngr/gabrielkonkle.com">GitHub Repository</a>
         </Footer>;
       </div>
     </ThemeProvider>

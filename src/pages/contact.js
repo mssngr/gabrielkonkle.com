@@ -47,11 +47,11 @@ const Contact = () => (
   <Wrapper>
     <Helmet title={`Contact | ${config.siteTitle}`} />
     <Header>
-      <Link to="/">{config.siteTitle}</Link>
+      <Link to="/">Home</Link>
     </Header>
     <Content>
       <h1>Contact</h1>
-      <p>Super cool intro text to get people contacting me! It uses Netlify's form feature.</p>
+      <p>Get in touch.</p>
       <form name="contact-form" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
         <p>
           <label htmlFor="name">Name</label>
