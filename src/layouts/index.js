@@ -1,10 +1,11 @@
 /* eslint no-unused-expressions:0 */
 
-import React from 'react';
-import styled, { ThemeProvider, injectGlobal } from 'styled-components';
-import SEO from '../components/SEO';
-import theme from '../../config/Theme';
-import { media } from '../utils/media';
+import React from 'react'
+import PropTypes from 'prop-types'
+import {ThemeProvider, injectGlobal} from 'styled-components'
+import SEO from '../components/SEO'
+import theme from '../../config/Theme'
+import {media} from '../utils/media'
 
 injectGlobal`
   ::selection {
@@ -55,27 +56,24 @@ injectGlobal`
       outline: none;
     }
   }
-`;
+`
 
-const Footer = styled.footer`
-  text-align: center;
-  padding: 3rem 0;
-`;
+class Layout extends React.Component {
+  static propTypes = {
+    children: PropTypes.node,
+  }
 
-const TemplateWrapper = props => {
-  const { children } = props;
-  return (
-    <ThemeProvider theme={theme}>
-      <div>
-        <SEO />
-        {children()}
-        <Footer>
-          &copy; 2018 by Gabriel Konkle. All rights reserved. <br />
-          <a href="https://github.com/mssngr/gabrielkonkle.com">GitHub Repository</a>
-        </Footer>;
-      </div>
-    </ThemeProvider>
-  );
-};
+  render() {
+    const {children} = this.props
+    return (
+      <ThemeProvider theme={theme}>
+        <div>
+          <SEO />
+          {children()}
+        </div>
+      </ThemeProvider>
+    )
+  }
+}
 
-export default TemplateWrapper;
+export default Layout
